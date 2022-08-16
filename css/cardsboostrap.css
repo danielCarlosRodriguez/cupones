@@ -1,0 +1,176 @@
+
+
+.cardsboostrap {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.25rem;
+}
+.cardsboostrap > hr {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+
+
+.cardsboostrap > .list-group {
+  border-top: inherit;
+  border-bottom: inherit;
+}
+.cardsboostrap > .list-group:first-child {
+  border-top-width: 0;
+  border-top-left-radius: calc(0.25rem - 1px);
+  border-top-right-radius: calc(0.25rem - 1px);
+}
+.cardsboostrap > .list-group:last-child {
+  border-bottom-width: 0;
+  border-bottom-right-radius: calc(0.25rem - 1px);
+  border-bottom-left-radius: calc(0.25rem - 1px);
+}
+.cardsboostrap > .cardsboostrap-header + .list-group,
+.cardsboostrap > .list-group + .cardsboostrap-footer {
+  border-top: 0;
+}
+.cardsboostrap-body {
+  flex: 1 1 auto;
+  padding: 1rem 1rem;
+}
+.cardsboostrap-title {
+  margin-bottom: 0.5rem;
+}
+.cardsboostrap-subtitle {
+  margin-top: -0.25rem;
+  margin-bottom: 0;
+}
+.cardsboostrap-text:last-child {
+  margin-bottom: 0;
+}
+.cardsboostrap-link:hover {
+  text-decoration: none;
+}
+.cardsboostrap-link + .cardsboostrap-link {
+  margin-left: 1rem;
+}
+
+
+.recortarTexto {
+  white-space: nowrap; 
+  width: 250px; 
+  overflow: hidden;
+  text-overflow: ellipsis; 
+  
+}
+
+
+.contenedorPost {
+  float: left;
+}
+
+/*
+.cardsboostrap-header {
+  padding: 0.5rem 1rem;
+  margin-bottom: 0;
+  background-color: rgba(0, 0, 0, 0.03);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+}
+.cardsboostrap-header:first-child {
+  border-radius: calc(0.25rem - 1px) calc(0.25rem - 1px) 0 0;
+}
+.cardsboostrap-footer {
+  padding: 0.5rem 1rem;
+  background-color: rgba(0, 0, 0, 0.03);
+  border-top: 1px solid rgba(0, 0, 0, 0.125);
+}
+.cardsboostrap-footer:last-child {
+  border-radius: 0 0 calc(0.25rem - 1px) calc(0.25rem - 1px);
+}
+
+
+
+.cardsboostrap-header-tabs {
+  margin-right: -0.5rem;
+  margin-bottom: -0.5rem;
+  margin-left: -0.5rem;
+  border-bottom: 0;
+}
+.cardsboostrap-header-pills {
+  margin-right: -0.5rem;
+  margin-left: -0.5rem;
+}
+.cardsboostrap-img-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  border-radius: calc(0.25rem - 1px);
+}
+
+
+
+.cardsboostrap-img,
+.cardsboostrap-img-bottom,
+.cardsboostrap-img-top {
+  width: 100%;
+}
+.cardsboostrap-img,
+.cardsboostrap-img-top {
+  border-top-left-radius: calc(0.25rem - 1px);
+  border-top-right-radius: calc(0.25rem - 1px);
+}
+.cardsboostrap-img,
+.cardsboostrap-img-bottom {
+  border-bottom-right-radius: calc(0.25rem - 1px);
+  border-bottom-left-radius: calc(0.25rem - 1px);
+}
+
+.cardsboostrap-group > .cardsboostrap {
+  margin-bottom: 0.75rem;
+}
+
+
+@media (min-width: 576px) {
+  .cardsboostrap-group {
+    display: flex;
+    flex-flow: row wrap;
+  }
+  .cardsboostrap-group > .cardsboostrap {
+    flex: 1 0 0%;
+    margin-bottom: 0;
+  }
+  .cardsboostrap-group > .cardsboostrap + .cardsboostrap {
+    margin-left: 0;
+    border-left: 0;
+  }
+  .cardsboostrap-group > .cardsboostrap:not(:last-child) {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  .cardsboostrap-group > .cardsboostrap:not(:last-child) .cardsboostrap-header,
+  .cardsboostrap-group > .cardsboostrap:not(:last-child) .cardsboostrap-img-top {
+    border-top-right-radius: 0;
+  }
+  .cardsboostrap-group > .cardsboostrap:not(:last-child) .cardsboostrap-footer,
+  .cardsboostrap-group > .cardsboostrap:not(:last-child) .cardsboostrap-img-bottom {
+    border-bottom-right-radius: 0;
+  }
+  .cardsboostrap-group > .cardsboostrap:not(:first-child) {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  .cardsboostrap-group > .cardsboostrap:not(:first-child) .cardsboostrap-header,
+  .cardsboostrap-group > .cardsboostrap:not(:first-child) .cardsboostrap-img-top {
+    border-top-left-radius: 0;
+  }
+  .cardsboostrap-group > .cardsboostrap:not(:first-child) .cardsboostrap-footer,
+  .cardsboostrap-group > .cardsboostrap:not(:first-child) .cardsboostrap-img-bottom {
+    border-bottom-left-radius: 0;
+  }
+}
+*/

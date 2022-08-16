@@ -1,0 +1,12 @@
+let cantidadActivos = 0;
+      datos.forEach((elemnt, i) => {
+        let resultado = datos[i].habilitado;
+         if resultado {
+         cantidadActivos ++;
+        }
+      });
+  console.log(cantidadActivos )
+document.getElementById(name).textContent = cantidadActivos ;
+
+$(".price-cash").text('VALOR NUEVO');
+  

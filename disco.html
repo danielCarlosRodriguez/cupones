@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="" />
+    <meta
+      name="author"
+      content="Mark Otto, Jacob Thornton, and Bootstrap contributors"
+    />
+    <meta name="generator" content="Hugo 0.82.0" />
+    <title>base</title>
+
+    <!-- carga de bootstrap 5 -->
+    <!-- <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-eOJMYsd53ii scO/bJGFsiCZc 5NDVN2yr8 0RDqr0Ql0h rP48ckxlpbzKgwra6"
+      crossorigin="anonymous"
+    /> -->
+
+    <!-- cargar desde acá --------------------------- -->
+
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+      <symbol
+        id="exclamation-triangle-fill"
+        fill="currentColor"
+        viewBox="0 0 16 16"
+      >
+        <path
+          d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"
+        />
+      </symbol>
+    </svg>
+
+    <link rel="stylesheet" href="/files/rse-bootstrap-min.css" />
+
+    <!-- iconos bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+    />
+
+    <link
+      rel="shortcut icon"
+      href="https://www.disco.com.uy/arquivos/disco-favicon.ico"
+    />
+
+    <style type="text/css">
+      .cardsboostrap {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        min-width: 0;
+        word-wrap: break-word;
+        background-color: #fff;
+        background-clip: border-box;
+        border: 1px solid rgba(0, 0, 0, 0.125);
+        border-radius: 0.25rem;
+      }
+      .cardsboostrap > hr {
+        margin-right: 0;
+        margin-left: 0;
+      }
+      .cardsboostrap > .list-group {
+        border-top: inherit;
+        border-bottom: inherit;
+      }
+      .cardsboostrap > .list-group:first-child {
+        border-top-width: 0;
+        border-top-left-radius: calc(0.25rem - 1px);
+        border-top-right-radius: calc(0.25rem - 1px);
+      }
+      .cardsboostrap > .list-group:last-child {
+        border-bottom-width: 0;
+        border-bottom-right-radius: calc(0.25rem - 1px);
+        border-bottom-left-radius: calc(0.25rem - 1px);
+      }
+      .cardsboostrap > .cardsboostrap-header .list-group,
+      .cardsboostrap > .list-group .cardsboostrap-footer {
+        border-top: 0;
+      }
+      .cardsboostrap-body {
+        flex: 1 1 auto;
+      }
+      .cardsboostrap-title {
+        margin-bottom: 0.5rem;
+      }
+      .cardsboostrap-subtitle {
+        margin-top: -0.25rem;
+        margin-bottom: 0;
+      }
+      .cardsboostrap-text:last-child {
+        margin-bottom: 0;
+      }
+      .cardsboostrap-link:hover {
+        text-decoration: none;
+      }
+      .cardsboostrap-link .cardsboostrap-link {
+        margin-left: 1rem;
+      }
+
+      .recortarTexto {
+        /* white-space: nowrap;
+        width: 250px;
+        overflow: hidden;
+        text-overflow: ellipsis; */
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        width: 240px;
+        font-size: 12px;
+      }
+
+      .contenedorPost {
+        float: left;
+      }
+
+      .badge {
+        font-family: sans-serif !important;
+      }
+
+      /* .modal-content {
+        padding: 50px;
+        width: 800px;
+      } */
+
+      .nav-link.active {
+        background-color: #dc3545 !important;
+      }
+
+      p {
+        font-size: 13px !important;
+      }
+
+      .col-md-12 {
+        padding-right: 0px !important;
+        padding-left: 0px !important;
+      }
+
+      .contenido-body {
+        margin-top: 9.5rem;
+        padding: 0px;
+        border-top: 1px solid #f1f1f1;
+      }
+
+      .ms-3 {
+        margin: 0 auto !important;
+      }
+
+      .fs-7 {
+        font-size: 0.6rem;
+      }
+
+      .fs-8 {
+        font-size: 0.55rem !important;
+      }
+
+      .color-boton {
+        background-color: #fe0000 !important;
+        border-color: #fe0000 !important;
+      }
+
+      .btn-outline-contorno {
+        color: #fe0000 !important;
+        border-color: #fe0000 !important;
+      }
+
+      .texto-base {
+        color: #fe0000 !important;
+      }
+
+      /* Mobile*/
+      @media screen and (max-width: 600px) {
+        .tarjeta-mobile {
+          justify-content: center;
+        }
+        .contenedor-tagg {
+          margin: auto !important;
+        }
+
+        .tagmobile {
+          width: 95px;
+        }
+
+        .form-switch{
+            margin-right: 0rem !important;
+        }
+      }
+
+      .color-tag {
+        background-color: #dc3545 !important;
+      }
+      .color-numero {
+        background-color: #000 !important;
+      }
+      .fuente-boton {
+        font-size: 14px;
+      }
+      .border-danger {
+        border-color: #dc3545 !important;
+      }
+      .form-check-input:checked {
+        background-color: #dc3545;
+        border-color: #dc3545;
+      }
+    </style>
+  </head>
+
+  <body style="background-color: #f2f2f2">
+    <!-- banner Principal -->
+    <img
+      src="https://disco.vteximg.com.br/arquivos/banner-mi-descuento-disco.jpg"
+      class="img-fluid w-100"
+      alt="banner miDescuento"
+      style="width: 100%"
+    />
+
+    <div class="container" id="contenedorDeDatos">
+      <!-- formulario -->
+      <h2 class="text-center mt-5 texto-base elementoIngresarCedula">
+        Ingresar Cédula de identidad sin puntos ni guiones
+      </h2>
+
+      <div class="row justify-content-center">
+        <div class="col-10 col-sm-6 col-md-4">
+          <div class="input-group mb-3 ">
+            <div class="input-group mb-3 elementoIngresarCedula">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Cédula de identidad"
+                aria-label="Cédula de identidad"
+                aria-describedby="button-addon2"
+                id="cedula"
+                onclick="ocultoAlerta()"
+              />
+              <button
+                onclick="numeroCedula()"
+                class="btn btn-outline-secondary"
+                type="button"
+                id="enviarCedula"
+              >
+                <i class="bi bi-search"></i>
+              </button>
+
+           
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="alert alert-warning d-flex align-items-center w-25"
+        role="alert"
+        style="margin: auto; display: none !important"
+        id="alertaCedula"
+      >
+        <svg
+          class="bi flex-shrink-0 me-2"
+          width="24"
+          height="24"
+          role="img"
+          aria-label="Warning:"
+        >
+          <use xlink:href="#exclamation-triangle-fill" />
+        </svg>
+        <div>Cédula Incorrecta</div>
+      </div>
+
+      <!-- spinner -->
+      <div class="row mt-5" id="spinner" style="display: none">
+        <div class="d-flex justify-content-center">
+          <div class="spinner-border" role="status" aria-hidden="true"></div>
+          
+        </div>
+      </div>
+
+      <!-- Alerta Cédula no encntrada -->
+      <h5 class="alert alert-danger mt-5 text-center mx-auto collapse" role="alert" id="alertaNoEncontrado">
+          No hay informacion para este documento
+      </h5>
+
+      <!-- Módulo de botones -->
+      <div class="d-flex flex-wrap justify-content-center mt-3">
+        <!-- categorías -->
+        <div
+          class="
+            d-flex
+            flex-wrap
+            mt-3
+            justify-content-center
+            text-center
+            me-5
+            contenedor-tagg
+          "
+        >
+          <div
+            class="row mx-2 justify-content-center displayCategorias"
+            v-for="(value, name) in contarCategorias1"
+            style="display: none"
+          >
+            <h6
+              class="badge color-tag position-relative tagmobile"
+              v-bind:id="name"
+              v-on:click="say(name)"
+              style="cursor: pointer"
+            >
+              {{ name }}
+
+              <!-- número -->
+              <span
+                class="
+                  position-absolute
+                  top-0
+                  start-100
+                  translate-middle
+                  badge
+                  rounded-pill
+                  color-numero
+                "
+              >
+                {{ value }}
+                <!-- <span class="visually-hidden">unread messages</span> -->
+              </span>
+            </h6>
+          </div>
+        </div>
+        <!-- FIN categorías -->
+      </div>
+      <!-- FIN Módulo de botones -->
+
+      <!-- etiqueta Todos -->
+      <div
+        class="
+          d-flex
+          flex-wrap
+          mt-3
+          justify-content-center
+          text-center
+          me-5
+          contenedor-tagg
+        "
+        style="display: none"
+      >
+        <div class="row mx-2 justify-content-center">
+          <h6
+            class="
+              badge
+              color-tag
+              position-relative
+              displayCategorias
+              tagmobile
+            "
+            style="cursor: pointer; display: none"
+            id="Todos"
+            v-on:click="sayTodos"
+            style="cursor: pointer"
+          >
+            TODOS
+
+            <span
+              class="
+                position-absolute
+                top-0
+                start-100
+                translate-middle
+                badge
+                rounded-pill
+                color-numero
+              "
+            >
+              {{ cantidad }}
+              <!-- <span class="visually-hidden">unread messages</span> -->
+            </span>
+          </h6>
+        </div>
+      </div>
+      <!-- FIN etiqueta Todos -->
+
+      <!-- ACTIVAR Todos -->
+      <div class="collapse displayCategorias">
+        <div
+          class="
+            form-check form-switch
+            d-flex
+            flex-wrap
+            mt-3
+            me-5
+            justify-content-center
+          "
+          id="ActivarTodos"
+        >
+          <input
+            class="form-check-input me-1"
+            type="checkbox"
+            id="flexSwitchCheckDefault"
+            v-on:click="sayActivarTodos"
+            style="pointer-events: none"
+            checked
+          />
+          <label class="form-check-label" for="flexSwitchCheckDefault"
+            >Activar Todos</label
+          >
+        </div>
+      </div>
+      <!-- FIN ACTIVAR Todos -->
+
+      <div id="displaycard" style="display: none">
+        <!-- tarjetas -->
+        <div
+          class="
+            d-flex
+            flex-wrap
+            mt-3
+            justify-content-left
+            text-center
+            tarjeta-mobile
+          "
+        >
+          <div
+            class="row mx-1 justify-content-center"
+            v-for="(misdatos, value ) in datos"
+            v-bind:class="misdatos.tags[0]"
+          >
+            <!-- tarjeta -->
+            <div
+              class="cardsboostrap text-center shadow-sm mt-2"
+              style="width: 9rem"
+            >
+              <p class="texto-base fs-8 mt-2">
+                {{misdatos.fechaDesde}}al {{misdatos.fechaHasta}}
+              </p>
+              <img
+                v-bind:src="misdatos.imagenChica"
+                v-bind:alt="misdatos.CodigoOferta"
+              />
+              <div class="cardsboostrap-body">
+                <div class="border-top"></div>
+                <div class="cardsboostrap-title texto-base fw-bold fs-5">
+                  {{ misdatos.texto[0].texto }}
+                </div>
+                <div class="border-top"></div>
+                <div
+                  class="fw-bolder fs-7"
+                  style="height: 2.5rem; align-items: center"
+                >
+                  {{ misdatos.texto[1].texto }}
+                </div>
+
+                <div v-if="misdatos.habilitado === false">
+                  <a
+                    class="btn color-boton w-100 text-white fuente-boton"
+                    v-bind:id="misdatos.codigoOferta"
+                    v-on:click="sayActivar(misdatos.codigoOferta)"
+                  >
+                    ACTIVAR</a
+                  >
+                </div>
+                <div v-else="misdatos.Habilitado">
+                  <a
+                    class="btn btn-outline-contorno w-100 fuente-boton"
+                    v-bind:id="misdatos.codigoOferta"
+                    v-on:click="sayActivar(misdatos.codigoOferta)"
+                  >
+                    DESACTIVAR</a
+                  >
+                </div>
+ <!-- href="https://www.disco.com.uy/terminos-y-condiciones#mi-descuento" -->
+                <p class="text-muted fs-8 mt-2" style="height: 0.05rem">
+
+                <div  v-if="misdatos.terminosYCondicones != ''">
+
+                  <a
+                   
+                    :href="misdatos.terminosYCondicones"
+                    class="text-decoration-none link-dark"
+                  >
+                    Ver términos y condiciones
+                  </a>
+                   </div>
+                 <div v-else>
+                  <a
+                   
+                    href="https://www.disco.com.uy/terminos-y-condiciones#mi-descuento"
+                    class="text-decoration-none link-dark"
+                  >
+                    Ver términos y condiciones
+                  </a>
+
+
+                  
+                  </div>
+                </p>
+
+                <div class="toast-container position-fixed bottom-0 end-0 p-3">
+                  <div
+                    v-bind:id="misdatos.texto[1].texto"
+                    class="toast color-boton"
+                    role="alert"
+                    aria-live="polite"
+                    aria-atomic="true"
+                    data-bs-delay="1000"
+                  >
+                    <div class="d-flex text-light">
+                      <div class="toast-body">
+                        {{ misdatos.texto[1].texto }}
+                      </div>
+                      <button
+                        type="button"
+                        class="btn-close btn-close-white me-2 m-auto"
+                        data-bs-dismiss="toast"
+                        aria-label="Close"
+                      ></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- FIN DE tarjeta -->
+          </div>
+        </div>
+      </div>
+
+      <div class="margenFondo" style="margin-bottom: 400px"></div>
+    </div>
+
+    <!-- JavaScript Bundle with Popper -->
+    <!-- <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-JEW9xMcG8R pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+      crossorigin="anonymous"
+    ></script>  -->
+    <script src="/files/rse-boostrap-popper.min.js"></script>
+
+    <script src="/files/rse-bootstrap.js"></script>
+
+    <!-- carga de jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- production version, optimized for size and speed -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+
+    <script src="/files/cupones.js"></script>
+
+    <!-- cargar hasta acá -->
+  </body>
+</html>

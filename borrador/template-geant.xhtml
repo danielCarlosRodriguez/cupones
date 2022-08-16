@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common"
+	xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce">
+
+<head>
+	<vtex:template id="fizz-head" />
+	<link rel="stylesheet" href="/files/commons.css" />
+	
+	
+	<svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+      <symbol
+        id="exclamation-triangle-fill"
+        fill="currentColor"
+        viewBox="0 0 16 16"
+      >
+        <path
+          d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"
+        />
+      </symbol>
+    </svg>
+
+    <link rel="stylesheet" href="/files/rse-bootstrap-min.css" />
+
+    <!-- iconos bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+    />
+
+    <style type="text/css">
+      .cardsboostrap {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        min-width: 0;
+        word-wrap: break-word;
+        background-color: #fff;
+        background-clip: border-box;
+        border: 1px solid rgba(0, 0, 0, 0.125);
+        border-radius: 0.25rem;
+      }
+      .cardsboostrap > hr {
+        margin-right: 0;
+        margin-left: 0;
+      }
+      .cardsboostrap > .list-group {
+        border-top: inherit;
+        border-bottom: inherit;
+      }
+      .cardsboostrap > .list-group:first-child {
+        border-top-width: 0;
+        border-top-left-radius: calc(0.25rem - 1px);
+        border-top-right-radius: calc(0.25rem - 1px);
+      }
+      .cardsboostrap > .list-group:last-child {
+        border-bottom-width: 0;
+        border-bottom-right-radius: calc(0.25rem - 1px);
+        border-bottom-left-radius: calc(0.25rem - 1px);
+      }
+      .cardsboostrap > .cardsboostrap-header .list-group,
+      .cardsboostrap > .list-group .cardsboostrap-footer {
+        border-top: 0;
+      }
+      .cardsboostrap-body {
+        flex: 1 1 auto;
+      }
+      .cardsboostrap-title {
+        margin-bottom: 0.5rem;
+      }
+      .cardsboostrap-subtitle {
+        margin-top: -0.25rem;
+        margin-bottom: 0;
+      }
+      .cardsboostrap-text:last-child {
+        margin-bottom: 0;
+      }
+      .cardsboostrap-link:hover {
+        text-decoration: none;
+      }
+      .cardsboostrap-link .cardsboostrap-link {
+        margin-left: 1rem;
+      }
+
+      .recortarTexto {
+        /* white-space: nowrap;
+        width: 250px;
+        overflow: hidden;
+        text-overflow: ellipsis; */
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        width: 240px;
+        font-size: 12px;
+      }
+
+      .contenedorPost {
+        float: left;
+      }
+
+     .nav-link.active {
+        background-color: #dc3545 !important;
+      }
+
+      p {
+        font-size: 13px !important;
+      }
+
+      .col-md-12 {
+        padding-right: 0px !important;
+        padding-left: 0px !important;
+      }
+
+      .contenido-body {
+        margin-top: 9.5rem;
+        padding: 0px;
+        border-top: 1px solid #f1f1f1;
+      }
+
+      .ms-3 {
+        margin: 0 auto !important;
+      }
+
+      .fs-7 {
+        font-size: 0.6rem;
+      }
+
+      .fs-8 {
+        font-size: 0.55rem !important;
+      }
+
+      .color-boton {
+        background-color: #009a9b !important;
+        border-color: #009a9b !important;
+      }
+
+      .btn-outline-contorno {
+        color: #009a9b !important;
+        border-color: #009a9b !important;
+      }
+
+      .texto-base {
+        color: #009a9b !important;
+      }
+
+      /* Mobile*/
+      @media screen and (max-width: 600px) {
+        .tarjeta-mobile {
+          justify-content: center;
+        }
+        .contenedor-tagg {
+          margin: auto !important;
+        }
+
+        .tagmobile {
+          width: 95px;
+        }
+        
+        .styles__Img-sc-1cwc66d-1.kveNnE {
+            margin-top: 45px;
+            margin-bottom: 20px;
+        }
+
+      }
+
+      .color-tag {
+        background-color: #009a9b !important;
+      }
+      .color-numero {
+        background-color: #000 !important;
+      }
+      .caja-termonos-y-condiciones {
+        line-height: 0px !important;
+        margin-bottom: 10px !important;
+      }
+
+      .link-dark {
+        color: black !important;
+      }
+      .styles__InstHeader-sc-1aj0d76-0.bULJGL {
+        display: none;
+      }
+      .styles__ImgContainer-sc-1cwc66d-0.kkEgpr {
+        margin-top: 0px;
+      }
+
+      .iGrlhA {
+        margin: auto !important;
+        padding-top: 0px !important;
+      }
+      .fuente-boton {
+          font-size: 14px;
+      }
+      .insignia {
+        display: inline-block;
+        padding: 0.35em 0.65em;
+        font-size: 0.75em;
+        font-family: sans-serif !important;
+        font-weight: 700;
+        line-height: 1;
+        color: #fff;
+        text-align: center;
+        white-space: nowrap;
+        vertical-align: baseline;
+        border-radius: 0.25rem;
+      }
+      .insignia:empty {
+        display: none;
+      }
+      .btn .insignia {
+        position: relative;
+        top: -1px;
+      }
+    </style>
+	
+</head>
+
+<body id="account-page">
+	<div style="display:none">
+		<vtex.cmc:welcomeMessage />
+		<vtex.cmc:departmentNavigator />
+		<vtex.cmc:customMenu />
+		<vtex.cmc:customFooterLinks />
+		<vtex.cmc:customFooterCards />
+	</div>
+
+	<div id="institutional-root"></div>
+	<section class="placeholders" hidden="hidden">
+		<div id="main-banner">
+			<vtex:contentPlaceHolder id="main-banner" />
+		</div>
+		<div class="title">
+			<vtex:contentPlaceHolder id="title" />
+		</div>
+		<div id="text-1">
+			<vtex:contentPlaceHolder id="text-1" />
+		</div>
+		<div id="text-2">
+			<vtex:contentPlaceHolder id="text-2" />
+		</div>
+	</section>
+	<vtex:template id="fizz-scripts" />
+    <script src="/files/commons.js"></script>
+	<script type="text/javascript" src="/files/institucional-default.js"></script> 
+    
+    
+    
+    
+    <script src="/files/rse-boostrap-popper.min.js"></script>
+
+    <script src="/files/rse-bootstrap.js"></script>
+
+    <!-- carga de jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- production version, optimized for size and speed -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+
+    <script src="/files/cupones.js"></script>
+    
+    
+</body>
+
+</html>

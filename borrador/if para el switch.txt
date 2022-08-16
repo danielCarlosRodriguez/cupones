@@ -1,0 +1,21 @@
+
+              let estadoSwitch = $("#flexSwitchCheckDefault").is(":checked");
+              console.log("🚀 ~ estadoSwitch", estadoSwitch)
+            if (!estadoSwitch) {
+              data.forEach((element, i) => {
+                let cuponesDeshabilitados = data[i].codigoOferta;
+                console.log("🚀 ~ cuponesDeshabilitados", cuponesDeshabilitados);
+
+                let cuponElement = document.getElementById(cuponesDeshabilitados);
+                cuponElement.textContent = "ACTIVAR";
+                cuponElement.classList.remove(
+                  "btn-outline-contorno",
+                  "texto-base"
+                );
+                cuponElement.classList.add("color-boton", "text-white");
+              });
+            } 
+
+
+.css({ opacity: "1", "pointer-events": "all" });
+.css({ opacity: "0.4", "pointer-events": "none" });
