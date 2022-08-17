@@ -1,4 +1,3 @@
-
 //Consigo datos del parámetro texto
 const url = top.location.href;
 var searchParams = new URLSearchParams(url);

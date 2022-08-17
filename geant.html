@@ -232,6 +232,12 @@
         border-color: #009aab;
       }
 
+      /* espacio arriba del link términos y condiciones */
+      .iGrlhA p:last-child {
+        margin-bottom: 30px !important;
+      }
+
+
   
     </style>
   </head>
@@ -499,17 +505,41 @@
                   >
                 </div>
 
-                <p
-                  class="text-muted fs-8 mt-2 caja-termonos-y-condiciones"
-                  style="height: 0.05rem"
-                >
-                  <a
-                    href="https://www.geant.com.uy/institucional/terminos-y-condiciones#mi-descuento"
-                    class="text-decoration-none link-dark"
-                  >
-                    Ver términos y condiciones
-                  </a>
-                </p>
+
+                
+
+<div style="font-size: 14px; line-height: 24px;" ></div>
+
+                <!-- Términos y Condiciones -->
+                <div v-if="misdatos.terminosYCondicones != ''">
+                  <p class="text-muted fs-8 mt-2" style="height: 0.05rem">
+                    <a
+                      class="text-decoration-none link-dark"
+                      v-on:click="terminos(misdatos.terminosYCondicones)"
+                      style="cursor: pointer"
+                    >
+                      Ver términos y condiciones
+                    </a>
+                  </p>
+                </div>
+
+                <div v-else>
+                  <p class="text-muted fs-8 mt-2" style="height: 0.05rem">
+                    <a
+                      href="https://www.geant.com.uy/institucional/terminos-y-condiciones#mi-descuento"
+                      class="text-decoration-none link-dark"
+                    >
+                      Ver términos y condiciones
+                    </a>
+                  </p>
+                </div>
+                <!-- FIN Términos y Condiciones -->
+
+
+
+
+
+
 
 
                 <div class="toast-container position-fixed bottom-0 end-0 p-3" style="z-index:3">

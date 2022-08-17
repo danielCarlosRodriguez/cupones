@@ -184,8 +184,8 @@
           width: 95px;
         }
 
-        .form-switch{
-            margin-right: 0rem !important;
+        .form-switch {
+          margin-right: 0rem !important;
         }
       }
 
@@ -225,7 +225,7 @@
 
       <div class="row justify-content-center">
         <div class="col-10 col-sm-6 col-md-4">
-          <div class="input-group mb-3 ">
+          <div class="input-group mb-3">
             <div class="input-group mb-3 elementoIngresarCedula">
               <input
                 type="text"
@@ -244,10 +244,6 @@
               >
                 <i class="bi bi-search"></i>
               </button>
-
-           
-
-
             </div>
           </div>
         </div>
@@ -275,28 +271,23 @@
       <div class="row mt-5" id="spinner" style="display: none">
         <div class="d-flex justify-content-center">
           <div class="spinner-border" role="status" aria-hidden="true"></div>
-          
         </div>
       </div>
 
       <!-- Alerta Cédula no encntrada -->
-      <h5 class="alert alert-danger mt-5 text-center mx-auto collapse" role="alert" id="alertaNoEncontrado">
-          No hay informacion para este documento
+      <h5
+        class="alert alert-danger mt-5 text-center mx-auto collapse"
+        role="alert"
+        id="alertaNoEncontrado"
+      >
+        No hay informacion para este documento
       </h5>
 
       <!-- Módulo de botones -->
       <div class="d-flex flex-wrap justify-content-center mt-3">
         <!-- categorías -->
         <div
-          class="
-            d-flex
-            flex-wrap
-            mt-3
-            justify-content-center
-            text-center
-            me-5
-            contenedor-tagg
-          "
+          class="d-flex flex-wrap mt-3 justify-content-center text-center me-5 contenedor-tagg"
         >
           <div
             class="row mx-2 justify-content-center displayCategorias"
@@ -313,15 +304,7 @@
 
               <!-- número -->
               <span
-                class="
-                  position-absolute
-                  top-0
-                  start-100
-                  translate-middle
-                  badge
-                  rounded-pill
-                  color-numero
-                "
+                class="position-absolute top-0 start-100 translate-middle badge rounded-pill color-numero"
               >
                 {{ value }}
                 <!-- <span class="visually-hidden">unread messages</span> -->
@@ -335,26 +318,12 @@
 
       <!-- etiqueta Todos -->
       <div
-        class="
-          d-flex
-          flex-wrap
-          mt-3
-          justify-content-center
-          text-center
-          me-5
-          contenedor-tagg
-        "
+        class="d-flex flex-wrap mt-3 justify-content-center text-center me-5 contenedor-tagg"
         style="display: none"
       >
         <div class="row mx-2 justify-content-center">
           <h6
-            class="
-              badge
-              color-tag
-              position-relative
-              displayCategorias
-              tagmobile
-            "
+            class="badge color-tag position-relative displayCategorias tagmobile"
             style="cursor: pointer; display: none"
             id="Todos"
             v-on:click="sayTodos"
@@ -363,15 +332,7 @@
             TODOS
 
             <span
-              class="
-                position-absolute
-                top-0
-                start-100
-                translate-middle
-                badge
-                rounded-pill
-                color-numero
-              "
+              class="position-absolute top-0 start-100 translate-middle badge rounded-pill color-numero"
             >
               {{ cantidad }}
               <!-- <span class="visually-hidden">unread messages</span> -->
@@ -384,14 +345,7 @@
       <!-- ACTIVAR Todos -->
       <div class="collapse displayCategorias">
         <div
-          class="
-            form-check form-switch
-            d-flex
-            flex-wrap
-            mt-3
-            me-5
-            justify-content-center
-          "
+          class="form-check form-switch d-flex flex-wrap mt-3 me-5 justify-content-center"
           id="ActivarTodos"
         >
           <input
@@ -412,14 +366,7 @@
       <div id="displaycard" style="display: none">
         <!-- tarjetas -->
         <div
-          class="
-            d-flex
-            flex-wrap
-            mt-3
-            justify-content-left
-            text-center
-            tarjeta-mobile
-          "
+          class="d-flex flex-wrap mt-3 justify-content-left text-center tarjeta-mobile"
         >
           <div
             class="row mx-1 justify-content-center"
@@ -472,30 +419,31 @@
 
 
 
-               <div  v-if="misdatos.terminosYCondicones != ''">
+
+                <!-- Términos y Condiciones -->
+                <div v-if="misdatos.terminosYCondicones != ''">
                   <p class="text-muted fs-8 mt-2" style="height: 0.05rem">
-                      <a
-                        class="text-decoration-none link-dark"
-                        v-on:click="terminos(misdatos.terminosYCondicones)"
-                        style="cursor:pointer"
-                    
-                      >
-                        Ver términos y condiciones
-                  </a>
-                     </p>
-                      </div>
-                    <div v-else>
-                      <p class="text-muted fs-8 mt-2" style="height: 0.05rem">
+                    <a
+                      class="text-decoration-none link-dark"
+                      v-on:click="terminos(misdatos.terminosYCondicones)"
+                      style="cursor: pointer"
+                    >
+                      Ver términos y condiciones
+                    </a>
+                  </p>
+                </div>
 
-                      <a
-                        href="https://www.disco.com.uy/terminos-y-condiciones#mi-descuento"
-                        class="text-decoration-none link-dark"
-                      >
-                        Ver términos y condiciones
-                      </a>
-                    </div>
-                </p>
-
+                <div v-else>
+                  <p class="text-muted fs-8 mt-2" style="height: 0.05rem">
+                    <a
+                      href="https://www.disco.com.uy/terminos-y-condiciones#mi-descuento"
+                      class="text-decoration-none link-dark"
+                    >
+                      Ver términos y condiciones
+                    </a>
+                  </p>
+                </div>
+                <!-- FIN Términos y Condiciones -->
 
 
 

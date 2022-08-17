@@ -411,6 +411,15 @@ function mostrarCupones(nDeCedula) {
             }
           },
           //FIN Activar TODOS los Cupones---------------
+
+          //envío datos a términos y condiciones
+          terminos: function (message) {
+            //console.log(message);
+            let terminos = message.replaceAll("\n", "xxx");
+            top.location.href = `https://www.geant.com.uy/institucional/terminos-y-condiciones?text=${terminos}#mi-descuento`;
+          },
+
+          
         },
       });
 

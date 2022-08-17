@@ -471,14 +471,39 @@
                   >
                 </div>
 
-                <p class="text-muted fs-8" style="height: 0.05rem">
-                  <a
-                    href="https://www.devoto.com.uy/terminos-y-condiciones#mi-descuento"
-                    class="text-decoration-none link-dark"
-                  >
-                    Ver términos y condiciones
-                  </a>
-                </p>
+
+
+
+
+                <!-- Términos y Condiciones -->
+                <div v-if="misdatos.terminosYCondicones != ''">
+                  <p class="text-muted fs-8 mt-2" style="height: 0.05rem">
+                    <a
+                      class="text-decoration-none link-dark"
+                      v-on:click="terminos(misdatos.terminosYCondicones)"
+                      style="cursor: pointer"
+                    >
+                      Ver términos y condiciones
+                    </a>
+                  </p>
+                </div>
+
+                <div v-else>
+                  <p class="text-muted fs-8 mt-2" style="height: 0.05rem">
+                    <a
+                      href="https://www.devoto.com.uy/terminos-y-condiciones#mi-descuento"
+                      class="text-decoration-none link-dark"
+                    >
+                      Ver términos y condiciones
+                    </a>
+                  </p>
+                </div>
+                <!-- FIN Términos y Condiciones -->
+
+
+
+
+
 
                 <div class="toast-container position-fixed bottom-0 end-0 p-3">
                   <div
