@@ -426,6 +426,13 @@ function mostrarCupones(nDeCedula) {
             }
           },
           //FIN Activar TODOS los Cupones---------------
+
+          //envío datos a términos y condiciones
+          terminos: function (message) {
+            //console.log(message);
+            top.location.href = `https://www.disco.com.uy/terminos-y-condiciones?text=${message}#mi-descuento`;
+            //top.location.href = `terminos.html?text=${message}#mi-descuento`;
+          },
         },
       });
 
