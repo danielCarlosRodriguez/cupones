@@ -429,8 +429,9 @@ function mostrarCupones(nDeCedula) {
 
           //envío datos a términos y condiciones
           terminos: function (message) {
-            //console.log(message);
-            top.location.href = `https://www.disco.com.uy/terminos-y-condiciones?text=${message}#mi-descuento`;
+       
+           let terminos = message.replaceAll("\n", "xxx");  
+           top.location.href = `https://www.disco.com.uy/terminos-y-condiciones?text=${terminos}#mi-descuento`;
             //top.location.href = `terminos.html?text=${message}#mi-descuento`;
           },
         },
